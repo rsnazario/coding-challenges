@@ -1,1 +1,17 @@
 
+def leftmost_nodes_sum(array)
+  pos = 0;
+  sum = array[pos];
+  while 1 do
+    if pos*2 + 1 < array.length 
+      pos = pos * 2 + 1
+      sum += array[pos]
+    else
+      break
+    end
+  end
+  return sum
+end
+
+puts leftmost_nodes_sum([2, 7, 5, 2, 6, 0, 9])
+# => 11

@@ -1,1 +1,21 @@
+def graph(hash_graph)
+  index = 0
+  result = [0]
+  while index != 4 do
+    result.push(hash_graph[index][0])
+    index = hash_graph[index][0]
+  end
+  result
+end
 
+hash = { 
+  0 => [2], 
+  1 => [4], 
+  2 => [5, 0, 3], 
+  3 => [2], 
+  4 => [1, 5], 
+  5 => [4, 2]
+}
+
+p graph(hash)
+# => [0, 2, 5, 4]

@@ -1,1 +1,13 @@
 
+def height(node)
+  
+  if node.nil?
+    return 0
+  else
+    left_heigth = 1 + height(node.left)
+    
+    right_height = 1 + height(node.right)
+    
+    return left_heigth > right_height ? left_heigth : right_height
+  end
+end
